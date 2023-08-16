@@ -10,3 +10,10 @@ session_set_cookie_params([
     'secure' => true,
     'httponly' => true
 ]);
+
+session_start();
+
+if () {
+    session_regenerate_id();
+    $_SESSION["last_regeneration"] = time();
+}
