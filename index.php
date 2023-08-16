@@ -11,19 +11,19 @@
 </head>
 <body class="position-relative">
 
-<div class="form-container position-absolute top-50 start-50 translate-middle">
-    <h3>Login</h3>
+<div class="form-container position-absolute top-50 start-50 translate-middle vw-100 d-flex flex-column align-items-center">
+    <h3 >Login</h3>
     
-    <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-3">
+    <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
         <input type="text" name="username" placeholder="Username" class="mb-3">
         <input type="password" name="pwd" placeholder="Password" class="mb-3">
         <button class="mb-3">Login</button>
         
     </form>
     
-    <h3>Signup</h3>
+    <h3 >Signup</h3>
     
-    <form action="includes/signup.inc.php" method="post" class="d-flex flex-column mb-3">
+    <form action="includes/signup.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
         <input type="text" name="username" placeholder="Username" class="mb-3">
         <input type="password" name="pwd" placeholder="Password" class="mb-3">
         <input type="text" name="email" placeholder="E-mail" class="mb-3">
