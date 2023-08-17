@@ -6,6 +6,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"];
     $email = $_POST["email"];
 
+    try{
+        require_once 'dbh.inc.php';
+
+    } catch (PDOException $e) {
+        die("Query failed: " . $e->getMessage());
+    
+    }
+
 } else {
     header("Location: ../index.php");
     die();
