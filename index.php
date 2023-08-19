@@ -1,10 +1,6 @@
 <?php
 require_once 'includes/config_session.inc.php';
 require_once 'includes/signup_view.inc.php';
-
-
-
-
 ?>
 
 
@@ -20,7 +16,7 @@ require_once 'includes/signup_view.inc.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body class="position-relative">
 
@@ -43,9 +39,11 @@ require_once 'includes/signup_view.inc.php';
         <button class="mb-3">Signup</button>
     
     </form>
+
     <?php
     check_signup_errors();
     ?>
+    
 </div>
     
 </body>
