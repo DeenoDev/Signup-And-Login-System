@@ -28,3 +28,12 @@ function is_username_taken(object $pdo, string $username) {
     }
      
 }
+
+function is_email_registered(object $pdo, string $email) {
+    if (get_username($pdo, $username)) {
+        return true;
+    } else {
+        return false;
+    }
+     
+}

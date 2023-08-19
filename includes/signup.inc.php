@@ -21,8 +21,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         if (is_username_taken($pdo, $username)) {
 
         }
+        if () {
 
-        
+        }
 
 
     } catch (PDOException $e) {
