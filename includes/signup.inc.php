@@ -18,6 +18,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         if (is_email_invalid($email)) {
 
         }
+        if (is_username_taken($pdo, $username)) {
+
+        }
 
         
 
