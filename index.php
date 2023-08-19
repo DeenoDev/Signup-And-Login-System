@@ -36,7 +36,7 @@ require_once 'includes/signup_view.inc.php';
         <input type="text" name="username" placeholder="Username" class="mb-3">
         <input type="password" name="pwd" placeholder="Password" class="mb-3">
         <input type="text" name="email" placeholder="E-mail" class="mb-3">
-        <button class="mb-3">Signup</button>
+        <button class="">Signup</button>
     
     </form>
 
