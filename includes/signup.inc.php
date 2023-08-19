@@ -31,6 +31,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
         }
 
+        require_once 'config_session.inc.php';
+
+        if($errors){
+            $_SESSION["error_signup"] = $errors;
+            header("Location: ../index.php");
+            die();
+
+        }
+
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());

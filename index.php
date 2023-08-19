@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +31,9 @@
         <button class="mb-3">Signup</button>
     
     </form>
+    <?php
+    check_signup_errors();
+    ?>
 </div>
     
 </body>
