@@ -33,9 +33,9 @@ require_once 'includes/signup_view.inc.php';
     <h3 >Signup</h3>
     
     <form action="includes/signup.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
-        <input type="text" name="username" placeholder="Username" class="mb-3">
-        <input type="password" name="pwd" placeholder="Password" class="mb-3">
-        <input type="text" name="email" placeholder="E-mail" class="mb-3">
+        <?php 
+        signup_inputs();
+        ?>
         <button class="">Signup</button>
     
     </form>
