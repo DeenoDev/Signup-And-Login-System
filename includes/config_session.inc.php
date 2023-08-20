@@ -13,15 +13,14 @@ session_set_cookie_params([
 
 session_start();
 
-if (isset($_SESSION["last_regeneration"])) {
+if (!isset($_SESSION["last_regeneration"])) {
     regenerate_session_id();
 }
 else {
     $interval = 60 * 30;
-    if(time() - $_SESSION['last_regeneration'] >= $interval){
+    if(time() - $_SESSION["last_regeneration"] >= $interval){
         session_regenerate_id();
-        $_SESSION["last_regeneration"] = time();
-
+        // $_SESSION["last_regeneration"] = time();
     }
 }
 
