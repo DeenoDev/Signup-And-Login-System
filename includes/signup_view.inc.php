@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+function signup_inputs() {
+        <input type="text" name="username" placeholder="Username" class="mb-3">
+        <input type="password" name="pwd" placeholder="Password" class="mb-3">
+        <input type="text" name="email" placeholder="E-mail" class="mb-3">
+}
+
 function check_signup_errors()
  {
     if (isset($_SESSION['errors_signup'])) {
