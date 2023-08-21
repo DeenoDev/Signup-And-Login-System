@@ -14,7 +14,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
          if (is_input_empty($username, $pwd, $email)) {
              $errors["empty_input"] = "Fill in all fields!";
- 
          }
          
  
