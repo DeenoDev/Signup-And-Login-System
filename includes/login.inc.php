@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $pwd = $_POST["pwd"];
 
     try{
-        
+
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
@@ -13,4 +13,5 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 else {
     header("Location: ../index.php");
     die();
+}
 }
