@@ -48,7 +48,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
          $sessionId = $newSessionId . "_" . $result["id"];
          session_id($sessionId);
 
-
+         $_SESSION["user_id"] = $result["id"];
+         $_SESSION["user_username"] = htmlspecialchars( $result["username"]);
+         
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
 }
