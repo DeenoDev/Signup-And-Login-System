@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-check_login_errors()
+function check_login_errors()
 {
-    if(isset($_SESSION["errors_login"])){
+    if (isset($_SESSION["errors_login"])) {
         $errors = $_SESSION["errors_login"];
 
         echo "<br>";
@@ -16,7 +16,8 @@ check_login_errors()
 
         unset($_SESSION["errors_login"]);
 
-    } else if (isset($_GET['login']) && $_GET['login'] === "success"){
+    }
+     else if (isset($_GET['login']) && $_GET['login'] === "success"){
 
       echo '<br>';
       echo '<p class="">Login success!</p>';
