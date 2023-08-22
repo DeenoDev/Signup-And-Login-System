@@ -14,6 +14,16 @@ session_set_cookie_params([
 session_start();
 
 if(isset($_SESSION['user_id'])){
+    if (!isset($_SESSION["last_regeneration"])) {
+        regenerate_session_id_loggedin();
+    }
+    else {
+        $interval = 60 * 30;
+        if(time() - $_SESSION["last_regeneration"] >= $interval){
+            session_regenerate_id_loggedin();
+            // $_SESSION["last_regeneration"] = time();
+        }
+    }
 
 } else {
     if (!isset($_SESSION["last_regeneration"])) {
@@ -26,15 +36,18 @@ if(isset($_SESSION['user_id'])){
             // $_SESSION["last_regeneration"] = time();
         }
     }
+}
 
+function regenerate_session_id_loggedin() 
+{
+        session_regenerate_id(true);
+        $_SESSION["last_regeneration"] = time();
 
 }
 
-
-
 function regenerate_session_id() 
 {
-        session_regenerate_id();
+        session_regenerate_id(true);
         $_SESSION["last_regeneration"] = time();
 
 }
