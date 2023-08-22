@@ -29,6 +29,11 @@ require_once 'includes/signup_view.inc.php';
         <button class="mb-3">Login</button>
         
     </form>
+
+    <?php 
+    check_login_errors();
+
+    ?>
     
     <h3 >Signup</h3>
     

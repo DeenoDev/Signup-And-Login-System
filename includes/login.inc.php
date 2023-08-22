@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
          require_once 'config_session.inc.php';
  
          if($errors){
-             $_SESSION["errors_signup"] = $errors;
+             $_SESSION["errors_login"] = $errors;
  
              $signupData = [
                  "username" => $username,
@@ -54,6 +54,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
          $_SESSION["last_regeneration"] = time();
 
          header("Location: ../index.php?login=success");
+         $pdo = null;
+         $statement = null;
+
+         die();
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
