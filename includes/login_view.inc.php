@@ -18,7 +18,7 @@ function check_login_errors()
         echo "<br>";
 
         foreach ($errors as $error){
-            echo '<p class="">' . $error . '</p>';
+            echo '<p class="m-1">' . $error . '</p>';
 
         }
 
@@ -28,7 +28,7 @@ function check_login_errors()
      else if (isset($_GET['login']) && $_GET['login'] === "success"){
 
       echo '<br>';
-      echo '<p class="">Login success!</p>';
+      echo '<p class="m-0 p-0">Login success!</p>';
     }
 
  }

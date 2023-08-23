@@ -18,22 +18,20 @@ require_once 'includes/login_view.inc.php';
 </head>
 <body class="position-relative">
 
+<div class="form-container position-absolute top-50 start-50 translate-middle vw-100 d-flex flex-column align-items-center row-gap-0">
 
-
-<div class="form-container position-absolute top-50 start-50 translate-middle vw-100 d-flex flex-column align-items-center">
-
-<h3 class="m-4 pt-5">
+<h3>
     <?php
     output_username(); 
     ?>
 </h3>
 
-<h3 >Login</h3>
+<h3>Login</h3>
     
-    <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
-        <input type="text" name="username" placeholder="Username" class="mb-3">
-        <input type="password" name="pwd" placeholder="Password" class="mb-3">
-        <button class="mb-3">Login</button>
+    <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-1 w-50 p-3 ">
+        <input type="text" name="username" placeholder="Username" class="mb-1">
+        <input type="password" name="pwd" placeholder="Password" class="mb-1">
+        <button >Login</button>
         
     </form>
 
@@ -42,9 +40,9 @@ require_once 'includes/login_view.inc.php';
 
     ?>
     
-    <h3 >Signup</h3>
+    <h3 class="mt-3">Signup</h3>
     
-    <form action="includes/signup.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
+    <form action="includes/signup.inc.php" method="post" class="d-flex flex-column mb-1 w-50 p-3 ">
         <?php 
         signup_inputs();
         ?>
@@ -56,11 +54,11 @@ require_once 'includes/login_view.inc.php';
     check_signup_errors();
     ?>
 
-<div class="pb-4 pt-0">
+<div class="pb-2 pt-0">
     <h3 >Logout</h3>
     
         <form action="includes/logout.inc.php" method="post" class="d-flex flex-column mb-3 w-20 p-3 ">
-            <button class="mb-3">Logout</button>
+            <button class="mb-2">Logout</button>
     
         </form>
 </div>

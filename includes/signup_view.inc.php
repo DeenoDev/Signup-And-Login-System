@@ -8,19 +8,19 @@ function signup_inputs() {
         // <input type="text" name="email" placeholder="E-mail" class="mb-3">
 
         if(isset($_SESSION["signup_data"]["username"]) && !isset($_SESSION["errors_signup"]["username_taken"])){
-            echo '<input type="text" name="username" placeholder="Username" value="' . $_SESSION["signup_data"]["username"] . '" class="mb-3">';
+            echo '<input type="text" name="username" placeholder="Username" value="' . $_SESSION["signup_data"]["username"] . '" class="mb-1">';
 
         } else {
-            echo '<input type="text" name="username" placeholder="Username"  class="mb-3">';
+            echo '<input type="text" name="username" placeholder="Username"  class="mb-1">';
         }
 
-        echo '<input type="password" name="pwd" placeholder="Password" class="mb-3">';
+        echo '<input type="password" name="pwd" placeholder="Password" class="mb-1">';
 
         if(isset($_SESSION["signup_data"]["email"]) && !isset($_SESSION["errors_signup"]["email_used"]) && !isset($_SESSION["errors_signup"]["invalid_email"])){
-            echo '<input type="text" name="email" placeholder="E-mail" value="' . $_SESSION["signup_data"]["email"] . '" class="mb-3">';
+            echo '<input type="text" name="email" placeholder="E-mail" value="' . $_SESSION["signup_data"]["email"] . '" class="mb-1">';
 
         } else {
-            echo '<input type="text" name="email" placeholder="E-mail" class="mb-3">';
+            echo '<input type="text" name="email" placeholder="E-mail" class="mb-1">';
         }
 
 }
@@ -33,7 +33,7 @@ function check_signup_errors()
         echo "<br>";
 
         foreach($errors as $error) {
-            echo '<p class="alert alert-danger" role="alert">' . $error . '</p>';
+            echo '<p>' . $error . '</p>';
         }
 
         unset($_SESSION['errors_signup']);
