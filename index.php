@@ -46,6 +46,15 @@ require_once 'includes/login_view.inc.php';
     <?php
     check_signup_errors();
     ?>
+
+<h3 >Logout</h3>
+    
+    <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-3 w-50 p-3 ">
+        <input type="text" name="username" placeholder="Username" class="mb-3">
+        <input type="password" name="pwd" placeholder="Password" class="mb-3">
+        <button class="mb-3">Login</button>
+        
+    </form>
     
 </div>
     
