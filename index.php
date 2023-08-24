@@ -26,6 +26,9 @@ require_once 'includes/login_view.inc.php';
     ?>
 </h3>
 
+<?php
+  if(!isset($_SESSION["user_id"])){ ?>
+
 <h3>Login</h3>
     
     <form action="includes/login.inc.php" method="post" class="d-flex flex-column mb-1 w-50 p-3 ">
@@ -34,6 +37,10 @@ require_once 'includes/login_view.inc.php';
         <button >Login</button>
         
     </form>
+    
+<?php } ?>
+
+
 
     <?php 
     check_login_errors();
